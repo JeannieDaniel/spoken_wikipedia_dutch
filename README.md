@@ -3,10 +3,10 @@
 To download the dataset, run the following bash commands
 
 `
-!(if [ -d "20000_mijlen/*" ]; then 
-     echo "Data exists in directory '20000_mijlen'. If the directory is empty or corrupted, remove it and re-run this cell." ;
- else 
-     rm -f audio_1.zip* audio_2.zip* transcript.txt* ;
+!(if [ -d "20000_mijlen/*" ]; then \
+     echo "Data exists in directory '20000_mijlen'. If the directory is empty or corrupted, remove it and re-run this cell." ;\
+ else \
+     rm -f audio_1.zip* audio_2.zip* transcript.txt* ;\
      wget -q --show-progres https://github.com/JeannieDaniel/spoken_wikipedia_dutch/releases/download/v1.0/audio_1.zip ;\
      wget -q --show-progres https://github.com/JeannieDaniel/spoken_wikipedia_dutch/releases/download/v1.0/audio_2.zip ;\
      wget -q --show-progres https://github.com/JeannieDaniel/spoken_wikipedia_dutch/releases/download/v1.0/transcript.txt ;\
@@ -48,6 +48,9 @@ def get_data(metadata = "transcript.txt", maxlen=50):
             soundfile.write(directory + name + '.wav', data, samplerate, subtype='PCM_16')
   
   convert_wav_files_to_16_bit('20000_mijlen/')
+  
   `
+  
+  
   
   
