@@ -46,11 +46,11 @@ def get_data(metadata = "transcript.txt", maxlen=50):
             name = file.rsplit('.', 1)[0]
             data, samplerate = soundfile.read(directory + file)                
             soundfile.write(directory + name + '.wav', data, samplerate, subtype='PCM_16')
-  
   convert_wav_files_to_16_bit('20000_mijlen/')
-  
+ 
   `
-  
+ 
+ Happy training
   
   
   
